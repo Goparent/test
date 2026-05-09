@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Aerotermia, Fotovoltaica y Ahorro Energético en el Vallès | Climelectra</title>
+<meta name="description" content="Artículos prácticos sobre aerotermia, fotovoltaica, subvenciones ICAEN y ahorro en la factura de la luz para propietarios de viviendas en el Vallès.">
+<link rel="canonical" href="https://www.climelectra.es/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_shared.css">
+<style>
+.blog-grid{display:grid;grid-template-columns:2fr 1fr;gap:3rem;align-items:start}
+.article-list{display:flex;flex-direction:column;gap:2rem}
+.article-card{background:var(--white);border:1px solid var(--n200);border-radius:var(--r12);overflow:hidden;box-shadow:var(--shadow-sm);transition:border-color var(--dur-m),transform var(--dur-m),box-shadow var(--dur-m);text-decoration:none;color:inherit;display:block}
+.article-card:hover{border-color:var(--verde);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.article-card.featured{border:1.5px solid var(--verde-mid);background:var(--verde-light)}
+.article-img{background:var(--n100);height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;border-bottom:1px solid var(--n200)}
+.article-img svg{color:var(--n400)}
+.article-img span{font-size:.75rem;color:var(--n400)}
+.article-body{padding:1.625rem}
+.article-meta{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:.875rem}
+.article-date{font-size:.8125rem;color:var(--n400)}
+.article-reading{font-size:.8125rem;color:var(--n400);display:flex;align-items:center;gap:.375rem}
+.article-title{font-family:var(--ff-display);font-size:1.375rem;font-weight:700;color:var(--n950);line-height:1.2;letter-spacing:-.02em;margin-bottom:.625rem}
+.article-title:hover{color:var(--verde)}
+.article-excerpt{font-size:.9375rem;color:var(--n600);line-height:1.7;margin-bottom:1.125rem}
+.article-link{display:inline-flex;align-items:center;gap:.375rem;font-family:var(--ff-body);font-size:.875rem;font-weight:700;color:var(--verde)}
+
+/* Sidebar */
+.sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:1.5rem}
+.sidebar-card{background:var(--white);border:1px solid var(--n200);border-radius:var(--r12);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.sidebar-title{font-family:var(--ff-body);font-size:.8125rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--n400);margin-bottom:1.125rem}
+.sidebar-topics{display:flex;flex-direction:column;gap:.375rem}
+.sidebar-topic{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:1px solid var(--n100);font-size:.875rem;color:var(--n700);text-decoration:none;transition:color var(--dur-f)}
+.sidebar-topic:hover{color:var(--verde)}
+.sidebar-topic:last-child{border-bottom:none}
+.topic-count{font-size:.75rem;background:var(--n100);padding:.125rem .5rem;border-radius:var(--rpill);color:var(--n400)}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.sidebar{position:static}}
+</style>
+</head>
+<body>
+<div id="site-header"></div>
+<div id="alert-banner"></div>
+
+<!-- HERO -->
+<section style="background:var(--n50);border-bottom:1px solid var(--n200);padding:clamp(3rem,6vw,5rem) clamp(1.25rem,4vw,3rem)">
+  <div style="max-width:var(--max-w);margin-inline:auto">
+    <span class="section-tag">Blog</span>
+    <h1 class="display-hero" style="max-width:600px;margin-bottom:1rem">Todo lo que nadie te explica sobre el ahorro energético en el Vallès.</h1>
+    <p class="body-large" style="max-width:520px">Sin tecnicismos. Sin interés en venderte algo concreto. Solo lo que necesitas saber para tomar una decisión informada.</p>
+  </div>
+</section>
+
+<!-- CONTENIDO -->
+<section class="section">
+  <div class="container">
+    <div class="blog-grid">
+      <!-- ARTÍCULOS -->
+      <div class="article-list">
+        <!-- Artículo 1 — featured -->
+        <a href="blog-aerotermia-valles-2026.html" class="article-card featured">
+          <div class="article-img"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>· imagen del artículo ·</span></div>
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="badge badge-green">Aerotermia</span>
+              <span class="badge badge-amber">Destacado</span>
+              <span class="article-date">12 ene 2026</span>
+              <span class="article-reading"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>7 min</span>
+            </div>
+            <h2 class="article-title">Aerotermia en el Vallès en 2026: lo que te cuentan y lo que no</h2>
+            <p class="article-excerpt">La publicidad dice hasta un 70 % de ahorro. ¿Es real? En qué casos sí, en qué casos no, y qué preguntas hacerle al instalador antes de firmar nada.</p>
+            <div class="article-link">Leer artículo completo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Artículo 2 -->
+        <a href="#" class="article-card">
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="badge badge-amber">Subvenciones</span>
+              <span class="article-date">3 feb 2026</span>
+              <span class="article-reading"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5 min</span>
+            </div>
+            <h2 class="article-title">Subvenciones ICAEN 2026: cómo pedirlas sin que se te pase el plazo</h2>
+            <p class="article-excerpt">Los fondos son limitados y se asignan por orden de solicitud. Qué necesitas, cuánto tiempo lleva y por qué muchos se quedan sin la ayuda por un error de documentación.</p>
+            <div class="article-link">Leer artículo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Artículo 3 -->
+        <a href="#" class="article-card">
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="badge badge-blue">Fotovoltaica</span>
+              <span class="article-date">18 feb 2026</span>
+              <span class="article-reading"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>6 min</span>
+            </div>
+            <h2 class="article-title">¿Cuántas placas solares necesitas realmente? La pregunta que nadie te hace</h2>
+            <p class="article-excerpt">El instalador que te propone más potencia no siempre es el que te da mejor retorno. Cómo calcular el sistema que más rápido se amortiza según tu consumo real.</p>
+            <div class="article-link">Leer artículo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Artículo 4 -->
+        <a href="#" class="article-card">
+          <div class="article-body">
+            <div class="article-meta">
+              <span class="badge badge-green">Electricidad</span>
+              <span class="article-date">5 mar 2026</span>
+              <span class="article-reading"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>4 min</span>
+            </div>
+            <h2 class="article-title">¿Necesitas el Boletín Eléctrico? Cuándo sí, cuándo no y cuánto cuesta</h2>
+            <p class="article-excerpt">Para comprar una vivienda, cambiar de comercializadora, ampliar potencia o instalar cargador de coche eléctrico. Todo lo que hay que saber sobre el BIE.</p>
+            <div class="article-link">Leer artículo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Temas del blog">
+        <div class="sidebar-card">
+          <div class="sidebar-title">Temas</div>
+          <div class="sidebar-topics">
+            <a href="#" class="sidebar-topic">Aerotermia <span class="topic-count">8</span></a>
+            <a href="#" class="sidebar-topic">Fotovoltaica <span class="topic-count">6</span></a>
+            <a href="#" class="sidebar-topic">Subvenciones ICAEN <span class="topic-count">5</span></a>
+            <a href="#" class="sidebar-topic">Electricidad <span class="topic-count">4</span></a>
+            <a href="#" class="sidebar-topic">Climatización <span class="topic-count">3</span></a>
+            <a href="#" class="sidebar-topic">Ahorro energético <span class="topic-count">7</span></a>
+          </div>
+        </div>
+        <div class="sidebar-card" style="background:var(--verde-dark);border-color:var(--verde-dark)">
+          <div class="sidebar-title" style="color:rgba(255,255,255,.4)">¿Tienes dudas?</div>
+          <h3 style="color:white;margin-bottom:.625rem;font-size:1.0625rem">La visita técnica es gratuita y sin compromiso.</h3>
+          <p style="font-size:.875rem;color:rgba(255,255,255,.6);margin-bottom:1.25rem">Te explicamos qué tiene sentido para tu caso antes de que decidas nada.</p>
+          <a href="presupuesto.html" class="btn btn-primary-dark" style="width:100%;justify-content:center">Pedir consulta gratuita</a>
+        </div>
+        <div class="sidebar-card" style="background:var(--amber-light);border-color:var(--amber-border)">
+          <div style="display:flex;gap:.625rem;align-items:flex-start">
+            <div class="alert-dot" style="margin-top:5px;flex-shrink:0" aria-hidden="true"></div>
+            <div>
+              <strong style="font-size:.875rem;color:var(--amber-text);display:block;margin-bottom:.375rem">Subvenciones hasta junio 2026</strong>
+              <p style="font-size:.8125rem;color:var(--amber-text);opacity:.85;margin:0 0 1rem">Fondos por orden de solicitud — cuanto antes actúes, más garantizado tienes el fondo.</p>
+              <a href="subvenciones.html" class="btn btn-sm" style="background:var(--amber-text);color:white;border-radius:var(--r6)">Ver ayudas disponibles</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<div id="wa-button"></div>
+<script src="_components.js"></script>
+<script>
+INJECT_ALL('Blog');
+(function(){var btn=document.getElementById('hamburger-btn'),menu=document.getElementById('mobile-menu');if(!btn||!menu)return;btn.addEventListener('click',function(){var open=menu.classList.toggle('open');btn.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);});})();
+</script>
+</body>
+</html>

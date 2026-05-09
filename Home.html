@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instaladores en el Vallès — Aerotermia, Fotovoltaica y Electricidad | Climelectra</title>
+<meta name="description" content="Deja de pagar de más. Instalamos aerotermia, fotovoltaica, electricidad y climatización en el Vallès. Tramitamos las subvenciones ICAEN por ti. Presupuesto gratis en 24h.">
+<meta name="keywords" content="aerotermia Vallès Oriental, instaladores electricidad Mollet del Vallès, fotovoltaica Granollers, subvenciones ICAEN aerotermia Cataluña 2026, climatización Vallès">
+<link rel="canonical" href="https://www.climelectra.es/">
+<meta property="og:title" content="Climelectra — Deja de pagar de más. Nosotros tramitamos las ayudas.">
+<meta property="og:description" content="Instaladores de aerotermia, fotovoltaica y electricidad en el Vallès. Tramitamos las subvenciones ICAEN por ti. Presupuesto gratis.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.climelectra.es/">
+<meta property="og:locale" content="es_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_shared.css">
+<style>
+/* ── PAGE-SPECIFIC ── */
+
+/* PAS / Problema */
+.pas-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.pain-list{display:flex;flex-direction:column;gap:.875rem;margin:1.25rem 0}
+
+/* Bill card */
+.bill-header{font-family:var(--ff-body);font-size:.6875rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--n400)}
+.bill-compare{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.bill-col{display:flex;flex-direction:column;gap:.25rem}
+.bill-col-label{font-size:.75rem;color:var(--n400)}
+.bill-amount{font-family:var(--ff-display);font-size:2.625rem;font-weight:900;line-height:1}
+.bill-amount.red{color:var(--red)}
+.bill-amount.green{color:var(--verde)}
+.bill-arrow{color:var(--n300)}
+.bill-saving{
+  display:inline-flex;align-items:center;gap:.375rem;
+  background:var(--verde-light);color:var(--verde-text);
+  font-size:.8125rem;font-weight:700;padding:.375rem .875rem;border-radius:var(--rpill);width:fit-content;
+}
+.bill-grant{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:1rem;border-top:1px solid var(--n200);
+}
+.bill-grant-label{font-size:.875rem;color:var(--n600)}
+.bill-grant-amount{font-family:var(--ff-display);font-size:1.375rem;font-weight:700;color:var(--blue)}
+.bill-note{font-size:.75rem;color:var(--n400);font-style:italic}
+.bill-card--tagged{position:relative;overflow:visible;margin-top:1.5rem}
+.bill-card--tagged .bill-header{display:flex;align-items:center;gap:.5rem}
+.bill-card--tagged .bill-header::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 4px var(--verde-light)}
+.bill-chip{
+  position:absolute;background:var(--white);border:1px solid var(--n200);
+  border-radius:var(--rpill);padding:.5rem 1rem;
+  font-family:var(--ff-body);font-size:.75rem;font-weight:700;color:var(--n700);
+  display:flex;align-items:center;gap:.5rem;box-shadow:var(--shadow-md);z-index:3;
+}
+.bill-chip svg{color:var(--verde)}
+.bill-chip--top{top:-1.375rem;right:-1rem;transform:rotate(3deg)}
+.bill-chip--bottom{bottom:-1.5rem;left:-1.25rem;transform:rotate(-4deg);background:var(--amber-light);border-color:var(--amber-border);color:var(--amber-text)}
+.bill-chip--bottom svg{color:var(--amber-text)}
+@media(max-width:768px){
+  .bill-chip{position:static;transform:none;width:max-content;max-width:100%;margin-bottom:.75rem}
+  .bill-card--tagged{margin-top:0}
+  .bill-card--tagged .bill-chip--bottom{margin-top:.75rem;margin-bottom:0}
+}
+
+/* Steps 4-col */
+.steps-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+
+/* Servicios grid */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.125rem}
+.svc-card{
+  background:var(--white);border:1px solid var(--n200);border-radius:var(--r12);
+  padding:1.5rem;display:flex;flex-direction:column;
+  box-shadow:var(--shadow-sm);text-decoration:none;color:inherit;
+  transition:border-color var(--dur-m) var(--ease),transform var(--dur-m) var(--ease),box-shadow var(--dur-m) var(--ease);
+}
+.svc-card:hover{border-color:var(--verde);transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.svc-card.card-featured{background:var(--amber-light);border:1.5px solid var(--amber-border)}
+.svc-card.card-featured:hover{border-color:var(--amber);box-shadow:0 4px 16px rgba(217,119,6,.15)}
+.svc-card .card-icon{margin-bottom:1rem}
+.svc-card h3{margin-bottom:.5rem}
+.svc-card p{font-size:.875rem;flex:1;margin-bottom:1rem}
+.svc-link{
+  display:inline-flex;align-items:center;gap:.375rem;
+  font-family:var(--ff-body);font-size:.875rem;font-weight:700;color:var(--verde);margin-top:auto;
+}
+.svc-card.card-featured .svc-link{color:var(--amber-text)}
+.svc-card.card-featured .card-icon{background:var(--amber-mid)}
+.svc-card.card-featured .card-icon svg{color:var(--amber-text)}
+
+/* Beneficios 3-col */
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.benefit-card{
+  background:var(--white);border:1px solid var(--n200);border-radius:var(--r12);
+  padding:1.75rem;box-shadow:var(--shadow-sm);
+}
+.benefit-num{
+  font-family:var(--ff-display);font-size:2.25rem;font-weight:900;font-style:italic;
+  color:var(--verde);opacity:.18;line-height:1;margin-bottom:.75rem;
+}
+.benefit-card h3{margin-bottom:.5rem}
+
+/* ICP */
+.icp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+
+/* CTA dark — about + form layout */
+.cta-final-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;
+  text-align:left;
+}
+.cta-form-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--r12);padding:2rem;
+}
+.cta-form-card .form-label{color:rgba(255,255,255,.75)}
+.cta-form-card .form-input,
+.cta-form-card .form-select{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:white}
+.cta-form-card .form-input::placeholder{color:rgba(255,255,255,.35)}
+.cta-form-card .form-input:focus,
+.cta-form-card .form-select:focus{border-color:rgba(255,255,255,.4);box-shadow:none}
+.cta-friction-list{display:flex;flex-direction:column;gap:.5rem;margin-top:1.5rem}
+.cta-friction-item{display:flex;gap:.625rem;font-size:.875rem;color:rgba(255,255,255,.65);align-items:flex-start}
+.cta-friction-item svg{color:var(--verde-mid);flex-shrink:0;margin-top:2px}
+.after-steps{display:flex;flex-direction:column;gap:.875rem;margin-top:1.5rem}
+.after-step{display:flex;gap:.875rem;align-items:flex-start}
+.after-step-num{
+  width:28px;height:28px;background:rgba(255,255,255,.1);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-display);font-size:.8125rem;font-weight:700;color:rgba(255,255,255,.6);
+  flex-shrink:0;
+}
+.after-step-text{font-size:.875rem;color:rgba(255,255,255,.65);line-height:1.6}
+.after-step-text strong{color:rgba(255,255,255,.9);display:block;margin-bottom:.125rem}
+
+@media(max-width:1024px){
+  .steps-4{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .benefit-grid{grid-template-columns:1fr 1fr}
+  .cta-final-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .pas-grid{grid-template-columns:1fr}
+  .icp-grid{grid-template-columns:1fr}
+  .steps-4{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .benefit-grid{grid-template-columns:1fr}
+}
+
+/* ══════════════════════════════════════════
+   HERO VARIATIONS — gated by body[data-hero]
+   ══════════════════════════════════════════ */
+.hero-variant{display:none}
+body[data-hero="A"] .hero-variant--A,
+body[data-hero="B"] .hero-variant--B,
+body[data-hero="C"] .hero-variant--C{display:block}
+
+/* ─── V1: Hero carousel ─── */
+.hero-carousel{
+  position:relative;border-radius:var(--r20);overflow:hidden;
+  background:var(--n200);min-height:420px;box-shadow:var(--shadow-md);
+}
+.hc-track{position:relative;width:100%;height:100%;min-height:420px}
+.hc-slide{
+  position:absolute;inset:0;opacity:0;transform:scale(1.02);
+  transition:opacity 600ms var(--ease), transform 800ms var(--ease);
+  display:flex;flex-direction:column;
+}
+.hc-slide.is-active{opacity:1;transform:scale(1);z-index:2}
+.hc-art{flex:1;position:relative;overflow:hidden;background:var(--n200)}
+.hc-art::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(15,23,42,.04),rgba(15,23,42,.42));
+  pointer-events:none;
+}
+.hc-art svg{width:100%;height:100%;display:block}
+.hc-art img{width:100%;height:100%;display:block;object-fit:cover}
+.hc-cap{
+  position:absolute;left:1.25rem;bottom:3.25rem;z-index:3;
+  display:flex;flex-direction:column;gap:.25rem;
+}
+.hc-tag{
+  display:inline-block;align-self:flex-start;
+  background:rgba(15,23,42,.78);backdrop-filter:blur(8px);
+  color:white;font-family:var(--ff-display);font-style:italic;font-weight:900;
+  font-size:1.5rem;letter-spacing:-0.02em;padding:.375rem .875rem;border-radius:var(--r8);
+}
+.hc-meta{
+  display:inline-block;align-self:flex-start;
+  background:rgba(255,255,255,.92);color:var(--n800);
+  font-family:var(--ff-body);font-size:.75rem;font-weight:600;
+  padding:.25rem .625rem;border-radius:var(--r6);
+}
+.hc-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:4;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.95);color:var(--n800);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-sm);transition:all var(--dur-f);
+}
+.hc-arrow:hover{background:white;color:var(--verde);transform:translateY(-50%) scale(1.08)}
+.hc-prev{left:.75rem}
+.hc-next{right:.75rem}
+.hc-dots{
+  position:absolute;left:50%;bottom:.75rem;transform:translateX(-50%);
+  display:flex;gap:.4375rem;z-index:4;
+  background:rgba(15,23,42,.4);backdrop-filter:blur(6px);
+  padding:.4375rem .625rem;border-radius:var(--rpill);
+}
+.hc-dot{
+  width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45);
+  border:none;padding:0;cursor:pointer;transition:all var(--dur-f);
+}
+.hc-dot:hover{background:rgba(255,255,255,.75)}
+.hc-dot.is-active{background:white;width:22px;border-radius:4px}
+.hc-note{
+  position:absolute;top:.875rem;right:.875rem;z-index:4;
+  font-size:.6875rem;color:white;background:rgba(15,23,42,.55);
+  padding:.25rem .625rem;border-radius:var(--rpill);
+  font-style:italic;backdrop-filter:blur(6px);
+}
+@media(max-width:768px){.hero-carousel,.hc-track{min-height:320px}.hc-cap{bottom:3rem}.hc-tag{font-size:1.25rem}}
+
+/* ─── V2: Bill-card focal ─── */
+.hero-bill-wrap{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  min-height:380px;
+}
+.hero-bill-card{
+  background:var(--white);border:1px solid var(--n200);border-radius:var(--r16);
+  padding:1.75rem;box-shadow:var(--shadow-lg);
+  display:flex;flex-direction:column;gap:1.125rem;
+  width:100%;max-width:420px;position:relative;z-index:2;
+}
+.hero-bill-card .bill-header{font-family:var(--ff-body);font-size:.6875rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--n400);display:flex;align-items:center;gap:.5rem}
+.hero-bill-card .bill-header::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 4px var(--verde-light)}
+.hero-bill-card .bill-compare{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.hero-bill-card .bill-col{display:flex;flex-direction:column;gap:.25rem}
+.hero-bill-card .bill-col-label{font-size:.75rem;color:var(--n400)}
+.hero-bill-card .bill-amount{font-family:var(--ff-display);font-size:2.5rem;font-weight:900;line-height:1}
+.hero-bill-card .bill-amount.red{color:var(--red);text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:rgba(239,68,68,.5)}
+.hero-bill-card .bill-amount.green{color:var(--verde)}
+.hero-bill-card .bill-arrow{color:var(--n300)}
+.hero-bill-saving{
+  display:inline-flex;align-items:center;gap:.375rem;align-self:flex-start;
+  background:var(--verde);color:white;
+  font-family:var(--ff-body);font-size:.8125rem;font-weight:700;
+  padding:.4375rem 1rem;border-radius:var(--rpill);
+}
+.hero-bill-grant{
+  display:flex;justify-content:space-between;align-items:center;
+  padding-top:1rem;border-top:1px dashed var(--n200);
+}
+.hero-bill-grant-label{font-size:.8125rem;color:var(--n600)}
+.hero-bill-grant-amount{font-family:var(--ff-display);font-size:1.375rem;font-weight:700;font-style:italic;color:var(--blue)}
+.hero-bill-note{font-size:.6875rem;color:var(--n400);font-style:italic;text-align:center;margin-top:-.25rem}
+/* deco floating chip behind */
+.hero-bill-chip{
+  position:absolute;background:var(--white);border:1px solid var(--n200);
+  border-radius:var(--rpill);padding:.5rem 1rem;
+  font-family:var(--ff-body);font-size:.75rem;font-weight:700;color:var(--n700);
+  display:flex;align-items:center;gap:.5rem;box-shadow:var(--shadow-md);z-index:3;
+}
+.hero-bill-chip svg{color:var(--verde)}
+.hero-bill-chip--top{top:14px;right:-18px;transform:rotate(3deg)}
+.hero-bill-chip--bot{bottom:24px;left:-32px;transform:rotate(-4deg)}
+.hero-bill-chip--bot svg{color:var(--amber-text)}
+.hero-bill-chip--bot{background:var(--amber-light);border-color:var(--amber-border);color:var(--amber-text)}
+
+/* ─── V3: Editorial monumental ─── */
+.hero-editorial{
+  text-align:center;max-width:1080px;margin-inline:auto;
+  padding:clamp(1rem,3vw,3rem) 0;
+}
+.hero-editorial .hero-eyebrow{margin-inline:auto}
+.hero-editorial-title{
+  font-family:var(--ff-display);
+  font-size:clamp(3rem,8.4vw,6.75rem);
+  font-weight:900;line-height:.96;letter-spacing:-0.045em;
+  color:var(--n950);margin-block:1.25rem 1.5rem;
+  text-wrap:balance;
+}
+.hero-editorial-title .line-1{display:block}
+.hero-editorial-title .line-2{display:block;font-style:italic;color:var(--verde)}
+.hero-editorial-title .punto{
+  display:inline-block;width:.18em;height:.18em;border-radius:50%;
+  background:var(--amber);vertical-align:.08em;margin-left:.06em;
+  box-shadow:0 0 0 .12em var(--amber-light);
+}
+.hero-editorial-sub{
+  max-width:600px;margin:0 auto 2.25rem;font-size:clamp(1rem,1.4vw,1.1875rem);
+  color:var(--n600);line-height:1.7;
+}
+.hero-editorial .hero-actions{justify-content:center}
+.hero-editorial-rule{
+  width:80px;height:2px;background:var(--n950);margin:0 auto 1.75rem;opacity:.85;
+}
+.hero-editorial-meta{
+  display:flex;flex-wrap:wrap;gap:.625rem 1.5rem;justify-content:center;
+  margin-top:2.75rem;padding-top:1.5rem;border-top:1px solid var(--n200);
+  font-family:var(--ff-body);font-size:.75rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--n400);
+}
+.hero-editorial-meta strong{color:var(--n950);font-weight:700}
+/* SVG isoline pattern as background — only in V3 */
+body[data-hero="C"] .hero-section{
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 30%, rgba(168,220,192,.18), transparent 70%),
+    var(--n50);
+}
+body[data-hero="C"] .hero-section::after{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M0 30 Q 15 20 30 30 T 60 30' fill='none' stroke='%231A7A4A' stroke-width='.6' stroke-opacity='.18'/%3E%3Cpath d='M0 45 Q 15 35 30 45 T 60 45' fill='none' stroke='%231A7A4A' stroke-width='.6' stroke-opacity='.12'/%3E%3Cpath d='M0 15 Q 15 5 30 15 T 60 15' fill='none' stroke='%231A7A4A' stroke-width='.6' stroke-opacity='.12'/%3E%3C/svg%3E");
+  opacity:.9;
+}
+
+/* ─── TWEAKS PANEL ─── */
+.tw-panel{
+  position:fixed;bottom:1.5rem;left:1.5rem;z-index:9999;
+  background:var(--white);border:1px solid var(--n200);border-radius:var(--r12);
+  box-shadow:var(--shadow-lg);padding:1rem 1.125rem 1.125rem;
+  width:280px;font-family:var(--ff-body);
+  display:none;
+}
+.tw-panel.open{display:block}
+.tw-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:.875rem}
+.tw-title{font-family:var(--ff-display);font-size:1rem;font-weight:900;font-style:italic;color:var(--n950);letter-spacing:-0.01em}
+.tw-close{
+  width:24px;height:24px;border-radius:6px;color:var(--n400);
+  display:flex;align-items:center;justify-content:center;transition:all var(--dur-f);
+}
+.tw-close:hover{background:var(--n100);color:var(--n800)}
+.tw-section{margin-bottom:.75rem}
+.tw-label{
+  font-size:.6875rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--n400);margin-bottom:.5rem;
+}
+.tw-radio{display:flex;flex-direction:column;gap:.375rem}
+.tw-opt{
+  display:flex;gap:.625rem;align-items:flex-start;
+  padding:.625rem .75rem;border:1px solid var(--n200);border-radius:var(--r8);
+  cursor:pointer;transition:all var(--dur-f);background:var(--white);text-align:left;
+}
+.tw-opt:hover{border-color:var(--n300);background:var(--n50)}
+.tw-opt[aria-pressed="true"]{border-color:var(--verde);background:var(--verde-light)}
+.tw-opt[aria-pressed="true"] .tw-opt-key{background:var(--verde);color:white}
+.tw-opt-key{
+  width:22px;height:22px;border-radius:6px;background:var(--n100);color:var(--n600);
+  font-family:var(--ff-display);font-size:.75rem;font-weight:900;font-style:italic;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+  transition:all var(--dur-f);
+}
+.tw-opt-name{font-size:.8125rem;font-weight:700;color:var(--n950);line-height:1.3}
+.tw-opt-desc{font-size:.6875rem;color:var(--n400);margin-top:.125rem;line-height:1.4}
+@media(max-width:768px){.tw-panel{left:1rem;right:1rem;bottom:1rem;width:auto}}
+</style>
+</head>
+<template id="__bundler_thumbnail" data-bg-color="#F8FAFC">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#F8FAFC"/>
+    <g transform="translate(600 400)">
+      <rect x="-90" y="-90" width="180" height="180" rx="36" fill="#1A7A4A"/>
+      <polygon points="20,-60 -50,30 10,30 -10,80 60,-10 0,-10" fill="#fff"/>
+    </g>
+    <text x="600" y="640" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-weight="900" font-size="56" fill="#0F172A" letter-spacing="-2">Climelectra</text>
+  </svg>
+</template>
+<body data-hero="A">
+
+<div id="site-header"></div>
+<div id="alert-banner"></div>
+
+<!-- ══ HERO A — FOTO EN OBRA (split editorial) ══ -->
+<section class="hero-section hero-variant hero-variant--A" aria-labelledby="hero-h1-a">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Instaladores en el Vallès · Barcelona
+      </div>
+      <h1 class="display-hero hero-title" id="hero-h1-a">
+        Deja de pagar de más.<br><span class="accent">Punto.</span>
+      </h1>
+      <p class="body-large hero-sub">Instalamos aerotermia, fotovoltaica y electricidad en el Vallès. Tramitamos las subvenciones por ti — sin que tengas que entender nada técnico, solo decidir.</p>
+      <div class="hero-actions">
+        <a href="presupuesto.html" class="btn btn-primary btn-lg">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Calcula cuánto puedes ahorrar este invierno
+        </a>
+        <a href="tel:622222883" class="hero-tel-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          O llámanos: <strong>622 222 883</strong>
+        </a>
+      </div>
+    </div>
+    <div class="hero-carousel" aria-roledescription="carousel" aria-label="Servicios Climelectra en obra">
+      <div class="hc-track" id="hc-track">
+        <figure class="hc-slide hc-aero is-active" role="group" aria-roledescription="slide" aria-label="1 de 4: Aerotermia">
+          <div class="hc-art">
+            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=82" alt="Técnico profesional revisando una instalación de climatización y aerotermia" loading="eager">
+          </div>
+          <figcaption class="hc-cap"><span class="hc-tag">Aerotermia</span><span class="hc-meta">Bomba de calor · Granollers</span></figcaption>
+        </figure>
+        <figure class="hc-slide hc-foto" role="group" aria-roledescription="slide" aria-label="2 de 4: Fotovoltaica">
+          <div class="hc-art">
+            <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=82" alt="Instalación profesional de placas solares fotovoltaicas en cubierta" loading="lazy">
+          </div>
+          <figcaption class="hc-cap"><span class="hc-tag">Fotovoltaica</span><span class="hc-meta">8,4 kWp · La Garriga</span></figcaption>
+        </figure>
+        <figure class="hc-slide hc-elec" role="group" aria-roledescription="slide" aria-label="3 de 4: Electricidad">
+          <div class="hc-art">
+            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=82" alt="Electricista profesional trabajando en una instalación eléctrica" loading="lazy">
+          </div>
+          <figcaption class="hc-cap"><span class="hc-tag">Electricidad</span><span class="hc-meta">Cuadro nuevo · Mollet</span></figcaption>
+        </figure>
+        <figure class="hc-slide hc-clima" role="group" aria-roledescription="slide" aria-label="4 de 4: Climatización">
+          <div class="hc-art">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=82" alt="Técnico profesional inspeccionando equipos de climatización" loading="lazy">
+          </div>
+          <figcaption class="hc-cap"><span class="hc-tag">Climatización</span><span class="hc-meta">Split · Cardedeu</span></figcaption>
+        </figure>
+      </div>
+      <button class="hc-arrow hc-prev" id="hc-prev" aria-label="Anterior">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="hc-arrow hc-next" id="hc-next" aria-label="Siguiente">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="hc-dots" role="tablist" aria-label="Servicios">
+        <button class="hc-dot is-active" data-i="0" aria-label="Aerotermia"></button>
+        <button class="hc-dot" data-i="1" aria-label="Fotovoltaica"></button>
+        <button class="hc-dot" data-i="2" aria-label="Electricidad"></button>
+        <button class="hc-dot" data-i="3" aria-label="Climatización"></button>
+      </div>
+      <p class="hc-note">Imágenes profesionales de instalaciones similares</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HERO B — LA FACTURA (bill-card focal) ══ -->
+<section class="hero-section hero-variant hero-variant--B" aria-labelledby="hero-h1-b">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Instaladores en el Vallès · Barcelona
+      </div>
+      <h1 class="display-hero hero-title" id="hero-h1-b">
+        Deja de pagar de más.<br><span class="accent">Punto.</span>
+      </h1>
+      <p class="body-large hero-sub">Instalamos aerotermia, fotovoltaica y electricidad en el Vallès. Tramitamos las subvenciones por ti — sin que tengas que entender nada técnico, solo decidir.</p>
+      <div class="hero-actions">
+        <a href="presupuesto.html" class="btn btn-primary btn-lg">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Calcula cuánto puedes ahorrar este invierno
+        </a>
+        <a href="tel:622222883" class="hero-tel-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          O llámanos: <strong>622 222 883</strong>
+        </a>
+      </div>
+    </div>
+    <div class="hero-bill-wrap" aria-hidden="true">
+      <div class="hero-bill-chip hero-bill-chip--top">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Subvención tramitada
+      </div>
+      <div class="hero-bill-card" aria-label="Comparativa real de ahorro con aerotermia">
+        <div class="bill-header">Vivienda 140 m² · Granollers</div>
+        <div class="bill-compare">
+          <div class="bill-col">
+            <div class="bill-col-label">Caldera de gas · mes</div>
+            <div class="bill-amount red">€ 245</div>
+          </div>
+          <div class="bill-arrow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+          <div class="bill-col" style="text-align:right">
+            <div class="bill-col-label">Aerotermia · mes</div>
+            <div class="bill-amount green">€ 72</div>
+          </div>
+        </div>
+        <div class="hero-bill-saving">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          70 % menos en factura
+        </div>
+        <div class="hero-bill-grant">
+          <div>
+            <div class="bill-col-label" style="margin-bottom:.125rem">Subvención ICAEN aplicada</div>
+            <div class="hero-bill-grant-amount">− 3.000 €</div>
+          </div>
+          <span class="badge badge-green">Gestionada por nosotros</span>
+        </div>
+        <p class="hero-bill-note">*Estimación orientativa. Tu caso puede variar.</p>
+      </div>
+      <div class="hero-bill-chip hero-bill-chip--bot">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Hasta junio 2026
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ HERO C — EDITORIAL MONUMENTAL (full type) ══ -->
+<section class="hero-section hero-variant hero-variant--C" aria-labelledby="hero-h1-c">
+  <div class="hero-editorial" style="position:relative;z-index:1">
+    <div class="hero-eyebrow" style="display:inline-flex">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Instaladores en el Vallès · Barcelona
+    </div>
+    <h1 class="hero-editorial-title" id="hero-h1-c">
+      <span class="line-1">Deja de pagar</span>
+      <span class="line-2">de más<span class="punto" aria-hidden="true"></span></span>
+    </h1>
+    <div class="hero-editorial-rule" aria-hidden="true"></div>
+    <p class="hero-editorial-sub">Instalamos aerotermia, fotovoltaica y electricidad en el Vallès. Tramitamos las subvenciones por ti — sin que tengas que entender nada técnico, solo decidir.</p>
+    <div class="hero-actions">
+      <a href="presupuesto.html" class="btn btn-primary btn-lg">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Calcula cuánto puedes ahorrar este invierno
+      </a>
+      <a href="tel:622222883" class="hero-tel-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+        O llámanos: <strong>622 222 883</strong>
+      </a>
+    </div>
+    <div class="hero-editorial-meta" aria-label="Datos clave">
+      <span><strong>15+ años</strong> en el Vallès</span>
+      <span><strong>500+</strong> proyectos</span>
+      <span><strong>4,9 ★</strong> en Google</span>
+      <span><strong>Hasta 3.000 €</strong> de ayuda ICAEN</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST BAR ═════════════════════════════ -->
+<div class="trust-bar" role="region" aria-label="Por qué confiar en Climelectra">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <div class="trust-icon-wrap" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <div><div class="metric-num">15+ años</div><div class="metric-label">instalando en el Vallès</div></div>
+    </div>
+    <div class="trust-sep" aria-hidden="true"></div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div><div class="metric-num">500+ proyectos</div><div class="metric-label">completados</div></div>
+    </div>
+    <div class="trust-sep" aria-hidden="true"></div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      </div>
+      <div><div class="metric-num">4.9 ★</div><div class="metric-label">Google Reviews</div></div>
+    </div>
+    <div class="trust-sep" aria-hidden="true"></div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div><div class="metric-num">24 h</div><div class="metric-label">de respuesta garantizada</div></div>
+    </div>
+    <div class="trust-sep" aria-hidden="true"></div>
+    <div class="trust-item">
+      <div class="trust-icon-wrap" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      </div>
+      <div><div class="metric-num">100 %</div><div class="metric-label">de subvenciones tramitadas</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ PAS / EL PROBLEMA ════════════════════ -->
+<section class="section" aria-labelledby="pas-title">
+  <div class="container">
+    <div class="pas-grid">
+      <div>
+        <span class="section-tag">El problema que resolvemos</span>
+        <h2 class="section-title" id="pas-title">¿Te suena alguna de estas situaciones?</h2>
+        <p class="body-large" style="margin:.875rem 0 0">Llevas meses sabiendo que deberías hacer algo con la caldera. Pero el proceso te parece opaco, los presupuestos no son comparables y nadie te explica las subvenciones sin tecnicismos.</p>
+        <div class="pain-list" role="list">
+          <div class="pain-item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <p>Llevas meses sin resolverlo porque el proceso te parece opaco y arriesgado.</p>
+          </div>
+          <div class="pain-item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <p>Hay hasta 3.000 € de subvención disponibles — y nadie te explicó cómo pedirlos.</p>
+          </div>
+          <div class="pain-item" role="listitem">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            <p>Ya tuviste una mala experiencia: el instalador no cumplió ni el precio ni el plazo.</p>
+          </div>
+        </div>
+        <div class="solution-box" style="margin-top:1.25rem">
+          <p>En Climelectra hacemos el proyecto completo — instalación, papeleo y tramitación de ayudas — para que tú solo tengas que firmar y empezar a ahorrar.</p>
+        </div>
+      </div>
+      <div>
+        <div class="bill-card bill-card--tagged" aria-label="Comparativa de ahorro real con aerotermia">
+          <div class="bill-chip bill-chip--top">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Subvención tramitada
+          </div>
+          <div class="bill-header">Vivienda 140 m² · Granollers</div>
+          <div class="bill-compare">
+            <div class="bill-col">
+              <div class="bill-col-label">Caldera de gas · mes</div>
+              <div class="bill-amount red" aria-label="245 euros al mes con caldera de gas">€ 245</div>
+            </div>
+            <div class="bill-arrow" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <div class="bill-col" style="text-align:right">
+              <div class="bill-col-label">Aerotermia · mes</div>
+              <div class="bill-amount green" aria-label="72 euros al mes con aerotermia">€ 72</div>
+            </div>
+          </div>
+          <div class="bill-saving">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            70 % menos en factura
+          </div>
+          <div class="bill-grant">
+            <div>
+              <div class="bill-col-label" style="margin-bottom:.25rem">Subvención ICAEN aplicada</div>
+              <div class="bill-grant-amount" aria-label="Menos 3000 euros de subvención">− 3.000 €</div>
+            </div>
+            <span class="badge badge-green">Gestionada por nosotros</span>
+          </div>
+          <p class="bill-note">*Estimación orientativa. Tu caso puede variar.</p>
+          <div class="bill-chip bill-chip--bottom">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Hasta junio 2026
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 3 BENEFICIOS ═════════════════════════ -->
+<section class="section-alt" aria-labelledby="benefits-title">
+  <div class="container">
+    <div class="section-header section-header-centered">
+      <span class="section-tag">Por qué Climelectra</span>
+      <h2 class="section-title" id="benefits-title">Lo que nadie más puede prometerte por escrito</h2>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit-card">
+        <div class="benefit-num" aria-hidden="true">01</div>
+        <h3>El presupuesto que firmas es el que pagas.</h3>
+        <p>Sin extras al terminar. Sin letra pequeña. Lo que acordamos al principio aparece en la factura — y no hay asteriscos. En 15 años, ningún cliente ha pagado más de lo acordado.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num" aria-hidden="true">02</div>
+        <h3>Hasta 3.000 € de ayuda. El papeleo lo hacemos nosotros.</h3>
+        <p>Hay fondos disponibles hasta junio de 2026. Te decimos exactamente a qué tienes derecho y presentamos la solicitud por ti. Tú solo firmas — nosotros hacemos el expediente completo.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num" aria-hidden="true">03</div>
+        <h3>Un equipo para todo. Sin coordinar a nadie más.</h3>
+        <p>Electricidad, aerotermia, climatización, fotovoltaica y fontanería. Un solo interlocutor, un presupuesto, una garantía. Fin del problema de "llama al otro".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CÓMO TRABAJAMOS ══════════════════════ -->
+<section class="section" aria-labelledby="steps-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Cómo trabajamos</span>
+      <h2 class="section-title" id="steps-title">Del primer contacto a la instalación acabada</h2>
+      <p>Sin sorpresas. Sin letra pequeña. Así es cada proyecto — desde el primero hasta el último.</p>
+    </div>
+    <div class="steps-4">
+      <div class="step-card">
+        <div class="step-bg-num" aria-hidden="true">1</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>Nos cuentas qué necesitas</h3>
+        <p>Teléfono, WhatsApp o formulario. Sin esperas — te contactamos en menos de 24 h.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-bg-num" aria-hidden="true">2</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <h3>Visita técnica gratuita</h3>
+        <p>Analizamos tu espacio y consumo actual. Te explicamos qué tiene sentido — sin presiones.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-bg-num" aria-hidden="true">3</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Presupuesto cerrado por escrito</h3>
+        <p>El precio acordado es el precio final. Sin extras. Sin sorpresas en la factura.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-bg-num" aria-hidden="true">4</div>
+        <div class="step-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Instalación con garantía escrita</h3>
+        <p>Cumplimos el plazo. Documentación completa y garantía por escrito al terminar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICIOS ════════════════════════════ -->
+<section class="section-alt" id="servicios" aria-labelledby="svc-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Servicios</span>
+      <h2 class="section-title" id="svc-title">¿Qué necesitas instalar o reparar?</h2>
+    </div>
+    <div class="svc-grid">
+      <a href="aerotermia.html" class="svc-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+        </div>
+        <h3>Aerotermia — Deja de quemar gas. Empieza a ahorrar de verdad.</h3>
+        <p>Sustituimos tu caldera por un sistema que produce calefacción, refrigeración y agua caliente con hasta un 70 % menos de consumo. Subvención ICAEN tramitada por nosotros.</p>
+        <div class="svc-link">Saber más <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="fotovoltaica.html" class="svc-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
+        <h3>Fotovoltaica — Tu tejado produce. Tu factura desaparece.</h3>
+        <p>Instalamos placas solares dimensionadas para tu consumo real. Tramitamos las ayudas y te decimos cuándo se amortiza — con datos, no con promesas.</p>
+        <div class="svc-link">Saber más <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="electricidad.html" class="svc-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Electricidad — Instalación en regla. Boletín incluido. Sin sorpresas.</h3>
+        <p>Cuadros eléctricos, reformas completas y boletines para contratar o ampliar potencia. Instalador autorizado por la Generalitat de Catalunya. Respuesta en 24 h.</p>
+        <div class="svc-link">Saber más <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="climatizacion.html" class="svc-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+        </div>
+        <h3>Climatización — Frío en verano, calor en invierno. Sin sobresaltos.</h3>
+        <p>Instalamos y mantenemos sistemas de aire acondicionado y bomba de calor con marcas líderes y garantía oficial. Mantenimiento anual para que el equipo dure el doble.</p>
+        <div class="svc-link">Saber más <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="fontaneria.html" class="svc-card">
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+        </div>
+        <h3>Fontanería — Fugas, atascos e instalaciones nuevas. Resuelto.</h3>
+        <p>Desde una fuga urgente hasta la fontanería completa de una reforma. Precio cerrado antes de empezar. No desaparecemos a mitad de la obra.</p>
+        <div class="svc-link">Saber más <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+      <a href="subvenciones.html" class="svc-card card-featured">
+        <span class="badge badge-amber" style="margin-bottom:.875rem">Hasta junio 2026</span>
+        <div class="card-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1z"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+        </div>
+        <h3>Gestión de subvenciones — Las ayudas existen. El problema es el papeleo.</h3>
+        <p>Te decimos a qué tienes derecho, preparamos toda la documentación y presentamos la solicitud al ICAEN. Tú cobras la ayuda — nosotros hacemos el trabajo.</p>
+        <div class="svc-link">Ver ayudas 2026 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA INTERMEDIO ═══════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="cta-mid">
+      <div>
+        <h2 class="section-title">Las subvenciones tienen fecha. Los fondos se asignan por orden de solicitud.</h2>
+        <p>Cada semana que pasa hay menos fondo disponible. La visita técnica es gratuita — y sin ella no sabrás a cuánto tienes derecho.</p>
+      </div>
+      <div class="cta-mid-actions">
+        <a href="presupuesto.html" class="btn btn-primary btn-lg">Reserva tu visita técnica gratuita</a>
+        <a href="tel:622222883" class="btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.36h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          622 222 883
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIOS ══════════════════════════ -->
+<section class="section-alt" aria-labelledby="testi-title">
+  <div class="container">
+    <div class="section-header section-header-centered">
+      <span class="section-tag">Lo que dicen</span>
+      <h2 class="section-title" id="testi-title">La primera factura siempre sorprende</h2>
+    </div>
+    <div class="grid-3">
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="testi-quote">"La factura de enero fue un 60 % más baja. Y tramitaron la subvención por nosotros — sin que tuviéramos que gestionar absolutamente nada."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">MG</div>
+          <div><div class="testi-name">Montserrat G.</div><div class="testi-meta">Granollers · Aerotermia · Dic. 2024</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="testi-quote">"Llevaba un año buscando alguien de confianza para el local. Un solo equipo para electricidad y climatización. Precio cerrado, sin sorpresas al final."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">JR</div>
+          <div><div class="testi-name">Jordi R.</div><div class="testi-meta">Mollet del Vallès · Local comercial · Mar. 2025</div></div>
+        </div>
+      </article>
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 estrellas">★★★★★</div>
+        <blockquote class="testi-quote">"Como presidente de comunidad necesitaba quien me explicara los fondos Next Generation sin rodeos. Lo hicieron con paciencia y mucha claridad."</blockquote>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">PV</div>
+          <div><div class="testi-name">Pere V.</div><div class="testi-meta">La Garriga · Comunidad de propietarios · Ene. 2025</div></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PARA QUIÉN ES ═════════════════════════ -->
+<section class="section" aria-labelledby="icp-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Para quién es Climelectra</span>
+      <h2 class="section-title" id="icp-title">No somos para todos. Por eso funcionamos.</h2>
+    </div>
+    <div class="icp-grid">
+      <div class="icp-col">
+        <div class="icp-col-title yes">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Somos tu empresa si…
+        </div>
+        <div class="icp-row"><span class="icp-check" aria-hidden="true">✓</span> Tienes vivienda en el Vallès y quieres reducir lo que pagas de energía</div>
+        <div class="icp-row"><span class="icp-check" aria-hidden="true">✓</span> Tienes un local o taller y necesitas un interlocutor único para todas las instalaciones</div>
+        <div class="icp-row"><span class="icp-check" aria-hidden="true">✓</span> Eres presidente de comunidad y quieres explorar ayudas para la rehabilitación del edificio</div>
+        <div class="icp-row"><span class="icp-check" aria-hidden="true">✓</span> Quieres que alguien te explique con claridad qué tiene sentido antes de gastar un euro</div>
+      </div>
+      <div class="icp-col">
+        <div class="icp-col-title no">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          Puede que no encajemos si…
+        </div>
+        <div class="icp-row"><span class="icp-cross" aria-hidden="true">✗</span> Buscas solo el precio más bajo sin importar la calidad ni la garantía</div>
+        <div class="icp-row"><span class="icp-cross" aria-hidden="true">✗</span> Necesitas zona fuera del Vallès y Barcelona — consúltanos primero, por si podemos ayudarte</div>
+        <div style="margin-top:1.25rem;background:var(--n100);border-radius:var(--r8);height:96px;display:flex;align-items:center;justify-content:center;gap:.5rem;border:1px dashed var(--n300)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="color:var(--n400)" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          <span style="font-size:.8125rem;color:var(--n400)">Cobertura: Vallès Oriental · Vallès Occidental · Barcelona</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA FINAL (verde pizarra) ════════════ -->
+<section class="section-dark" aria-labelledby="cta-final-title">
+  <div class="container">
+    <div class="cta-final-grid">
+      <!-- Columna izquierda: titular + argumentos -->
+      <div>
+        <div class="cta-dark-badge">
+          <div class="cta-badge-dot" aria-hidden="true"></div>
+          Fondos por orden de solicitud
+        </div>
+        <h2 class="cta-dark-title" id="cta-final-title" style="text-align:left;margin-inline:0">Cuéntanos qué necesitas. Te respondemos antes de 24 horas.</h2>
+        <p class="cta-dark-body" style="text-align:left;margin-left:0;margin-top:1rem">La visita técnica es gratuita. El presupuesto es escrito y sin letra pequeña. No hay ninguna obligación de contratar.</p>
+
+        <div class="after-steps" aria-label="Qué pasa cuando contactas">
+          <div class="after-step">
+            <div class="after-step-num" aria-hidden="true">1</div>
+            <div class="after-step-text"><strong>Confirmación inmediata</strong>Recibes un email de confirmación al momento.</div>
+          </div>
+          <div class="after-step">
+            <div class="after-step-num" aria-hidden="true">2</div>
+            <div class="after-step-text"><strong>Te llamamos en menos de 24 h</strong>Un técnico (no un comercial) se pone en contacto contigo.</div>
+          </div>
+          <div class="after-step">
+            <div class="after-step-num" aria-hidden="true">3</div>
+            <div class="after-step-text"><strong>Visita técnica gratuita</strong>Para proyectos de aerotermia o fotovoltaica, hacemos una visita sin coste.</div>
+          </div>
+        </div>
+
+        <div class="cta-friction-list" style="margin-top:2rem" aria-label="Garantías de contacto">
+          <div class="cta-friction-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Respuesta en menos de 24 horas laborables
+          </div>
+          <div class="cta-friction-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Sin compromiso de contratación
+          </div>
+          <div class="cta-friction-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Subvenciones gestionadas desde el primer día
+          </div>
+          <div class="cta-friction-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Tus datos solo se usan para responderte — sin spam
+          </div>
+        </div>
+      </div>
+      <!-- Columna derecha: formulario -->
+      <div>
+        <div class="cta-form-card">
+          <h3 style="color:white;margin-bottom:1.5rem;font-size:1.125rem">Solicitar presupuesto gratuito</h3>
+          <form id="contact-form" novalidate style="display:flex;flex-direction:column;gap:1rem">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+              <div class="form-group">
+                <label for="nombre" class="form-label">Tu nombre <span style="color:#f87171" aria-hidden="true">*</span></label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Montserrat" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="telefono" class="form-label">Tu teléfono <span style="color:#f87171" aria-hidden="true">*</span></label>
+                <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="612 345 678" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="servicio" class="form-label">¿Para qué tipo de instalación? <span style="color:#f87171" aria-hidden="true">*</span></label>
+              <select id="servicio" name="servicio" class="form-select" required>
+                <option value="" disabled selected>Selecciona un servicio</option>
+                <option value="aerotermia">Aerotermia (calefacción + agua caliente)</option>
+                <option value="fotovoltaica">Placas solares / Fotovoltaica</option>
+                <option value="electricidad">Instalación eléctrica</option>
+                <option value="climatizacion">Climatización / Aire acondicionado</option>
+                <option value="fontaneria">Fontanería</option>
+                <option value="varios">Varios servicios a la vez</option>
+                <option value="subvenciones">Consulta sobre subvenciones</option>
+                <option value="no-se">No tengo claro todavía qué necesito</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="municipio" class="form-label">¿En qué municipio? <span style="color:#f87171" aria-hidden="true">*</span></label>
+              <input type="text" id="municipio" name="municipio" class="form-input" placeholder="Granollers, La Garriga, Mollet…" required autocomplete="address-level2">
+            </div>
+            <button type="submit" class="btn btn-primary-dark btn-lg" style="width:100%;justify-content:center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Enviar — sin compromiso
+            </button>
+            <p style="font-size:.75rem;color:rgba(255,255,255,.4);text-align:center;margin-top:.25rem">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-2px;margin-right:3px" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Tus datos solo se usan para responderte — sin spam, sin cesión a terceros.
+            </p>
+          </form>
+          <div id="success-msg" style="display:none;text-align:center;padding:1.5rem 0" role="alert">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:#4ade80;margin:0 auto .875rem" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3 style="color:white;margin-bottom:.5rem">¡Solicitud recibida!</h3>
+            <p style="color:rgba(255,255,255,.6)">Te contactamos antes de 24 horas. Si es urgente: <a href="tel:622222883" style="color:var(--verde-mid);font-weight:700">622 222 883</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<div id="wa-button"></div>
+
+<!-- ══ TWEAKS PANEL ══ -->
+<div class="tw-panel" id="tw-panel" role="dialog" aria-label="Tweaks — variaciones de hero">
+  <div class="tw-head">
+    <div class="tw-title">Tweaks</div>
+    <button class="tw-close" id="tw-close" aria-label="Cerrar tweaks">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="tw-section">
+    <div class="tw-label">Variación del hero</div>
+    <div class="tw-radio" role="radiogroup">
+      <button class="tw-opt" data-hero-set="A" aria-pressed="true">
+        <span class="tw-opt-key">A</span>
+        <span><span class="tw-opt-name">Foto en obra</span><span class="tw-opt-desc">Split editorial · placeholder de foto real</span></span>
+      </button>
+      <button class="tw-opt" data-hero-set="B" aria-pressed="false">
+        <span class="tw-opt-key">B</span>
+        <span><span class="tw-opt-name">La factura</span><span class="tw-opt-desc">Split con bill-card · prueba de ahorro</span></span>
+      </button>
+      <button class="tw-opt" data-hero-set="C" aria-pressed="false">
+        <span class="tw-opt-key">C</span>
+        <span><span class="tw-opt-name">Editorial monumental</span><span class="tw-opt-desc">Centrado · tipografía dominante</span></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var TWEAKS = /*EDITMODE-BEGIN*/{
+    "hero": "A"
+  }/*EDITMODE-END*/;
+  document.body.setAttribute('data-hero', TWEAKS.hero);
+  var panel = document.getElementById('tw-panel');
+  function setHero(v){
+    TWEAKS.hero = v;
+    document.body.setAttribute('data-hero', v);
+    document.querySelectorAll('[data-hero-set]').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-hero-set')===v ? 'true':'false');
+    });
+    try{ window.parent.postMessage({type:'__edit_mode_set_keys', edits:{hero:v}},'*'); }catch(e){}
+  }
+  document.querySelectorAll('[data-hero-set]').forEach(function(b){
+    b.addEventListener('click', function(){ setHero(b.getAttribute('data-hero-set')); });
+  });
+  window.addEventListener('message', function(e){
+    var d = e.data || {};
+    if(d.type==='__activate_edit_mode'){ panel.classList.add('open'); }
+    else if(d.type==='__deactivate_edit_mode'){ panel.classList.remove('open'); }
+  });
+  document.getElementById('tw-close').addEventListener('click', function(){
+    panel.classList.remove('open');
+    try{ window.parent.postMessage({type:'__edit_mode_dismissed'},'*'); }catch(e){}
+  });
+  try{ window.parent.postMessage({type:'__edit_mode_available'},'*'); }catch(e){}
+})();
+</script>
+
+<script>
+(function(){
+  var slides=document.querySelectorAll('.hc-slide'),dots=document.querySelectorAll('.hc-dot');
+  if(!slides.length)return;
+  var i=0,timer=null;
+  function go(n){
+    i=(n+slides.length)%slides.length;
+    slides.forEach(function(s,k){s.classList.toggle('is-active',k===i)});
+    dots.forEach(function(d,k){d.classList.toggle('is-active',k===i)});
+  }
+  function start(){stop();timer=setInterval(function(){go(i+1)},5000)}
+  function stop(){if(timer){clearInterval(timer);timer=null}}
+  document.getElementById('hc-prev').addEventListener('click',function(){go(i-1);start()});
+  document.getElementById('hc-next').addEventListener('click',function(){go(i+1);start()});
+  dots.forEach(function(d){d.addEventListener('click',function(){go(+d.dataset.i);start()})});
+  var car=document.querySelector('.hero-carousel');
+  car.addEventListener('mouseenter',stop);car.addEventListener('mouseleave',start);
+  start();
+})();
+</script>
+<script src="_components.js"></script>
+<script>
+INJECT_ALL('');
+
+// Form
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var required = this.querySelectorAll('[required]');
+  var valid = true;
+  required.forEach(function(f) {
+    if (!f.value.trim()) { f.style.borderColor = 'var(--red)'; valid = false; }
+    else f.style.borderColor = '';
+  });
+  if (!valid) return;
+  var btn = this.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.textContent = 'Enviando…';
+  setTimeout(function() {
+    document.getElementById('contact-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }, 700);
+});
+</script>
+<!-- Hamburger -->
+<script>
+(function(){
+  var btn=document.getElementById('hamburger-btn'),menu=document.getElementById('mobile-menu');
+  if(!btn||!menu)return;
+  btn.addEventListener('click',function(){
+    var open=menu.classList.toggle('open');
+    btn.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open);
+  });
+})();
+</script>
+</body>
+</html>
